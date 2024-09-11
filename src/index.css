@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,11 +27,21 @@ h1{
   text-align: center;
 }
 
-nav{
-  display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+nav {
+  display: flex; /* Para colocar los elementos en línea */
+  align-items: center; /* Alinea verticalmente el contenido dentro del nav */
+  justify-content: space-between; /* Espacia los elementos entre ellos */
   padding: 1rem;
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
+  background-color: #f8f9fa; /* Puedes agregar un fondo si lo deseas */
+}
+
+ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  display: flex; /* Coloca los elementos de la lista en línea */
+  margin: 0;
+  padding: 0;
+  gap: 2rem; /* Aumenta el espacio entre los enlaces */
 }
 
 a{
@@ -43,12 +57,10 @@ a:hover{
 footer {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center; /* Asegura que los elementos se alineen verticalmente */
   padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
+  width: 100%; /* Asegura que ocupe el 100% del ancho */
+  background-color: #f8f9fa; /* Agrega un fondo opcional */
   margin-top: 2rem;
 }
 
@@ -56,18 +68,37 @@ footer > img{
   width: 200px;
   margin: 0;
 }
+
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
+  width: 400px;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  margin: 2rem auto;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card{
